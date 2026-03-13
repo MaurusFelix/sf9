@@ -692,7 +692,13 @@ def index():
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#    init_db()
+#    print("✅ StudyFlow v3 gestartet → http://localhost:5000")
+#    app.run(host='0.0.0.0', port=5000, debug=False)
+
+
+if __name__ == "__main__":
     init_db()
-    print("✅ StudyFlow v3 gestartet → http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    print("✅ StudyFlow v3 gestartet.")
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
